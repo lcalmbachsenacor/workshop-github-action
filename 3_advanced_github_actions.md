@@ -56,4 +56,4 @@ jobs:
           echo "Deploy to a certain environment"
 ```
 
-[next >>](./4_composite_actions)
+[next >>](./4_composite_actions.md)
