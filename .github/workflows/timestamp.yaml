@@ -1,10 +1,10 @@
-  - name: Create timestamp
-    id: create_timestamp
-    run: |
-      CURRENT_DATE=$(date +'%Y-%m-%d')
-      echo "current date $CURRENT_DATE"
-      echo "current_timestamp=$CURRENT_DATE" >> "$GITHUB_OUTPUT"
-  - name: Create image
-    run: echo "Create docker image with tag ${{ steps.create_timestamp.outputs.current_timestamp }}"
-  - name: Deploy tag
-    run: echo "Deploy tag ${{ steps.create_timestamp.outputs.current_timestamp }} to environment"
+name: Create timestamp
+id: create_timestamp
+run: |
+  CURRENT_DATE=$(date +'%Y-%m-%d')
+  echo "current date $CURRENT_DATE"
+  echo "current_timestamp=$CURRENT_DATE" >> "$GITHUB_OUTPUT"
+name: Create image
+run: echo "Create docker image with tag ${{ steps.create_timestamp.outputs.current_timestamp }}"
+name: Deploy tag
+run: echo "Deploy tag ${{ steps.create_timestamp.outputs.current_timestamp }} to environment"
