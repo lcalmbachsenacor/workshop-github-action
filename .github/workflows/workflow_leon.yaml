@@ -1,0 +1,10 @@
+namwe: My Workflow
+on: push
+jobs:
+  build:
+    runs-on: alpine-latest
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v4
+    - name: Run script
+      run: echo "Hello World!"
