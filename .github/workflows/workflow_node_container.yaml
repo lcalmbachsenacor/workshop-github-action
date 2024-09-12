@@ -1,0 +1,12 @@
+name: Node.js CI
+on: [push]
+jobs:
+  docker-base:
+      runs-on: ubuntu-latest
+      container: node:hydrogen-alpine
+      steps:
+        - uses: actions/checkout@v4
+        - name: Install dependencies
+          run: npm install
+        - name: Run tests
+          run: npm test
