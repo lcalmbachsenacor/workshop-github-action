@@ -1,0 +1,12 @@
+name: Deploy to Production
+on: push
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v2
+    - name: Deploy
+      run: ./deploy/deploy.sh
+      env:
+        API_TOKEN: ${{ secrets.API_TOKEN }}
