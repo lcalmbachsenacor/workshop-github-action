@@ -1,4 +1,4 @@
-namwe: My Workflow
+name: My Workflow
 on: push
 jobs:
   build:
